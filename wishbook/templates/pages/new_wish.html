@@ -3,9 +3,12 @@
 
 {% block content %}
     <div class="container">
-        <div id="header">
+        <a href="{% url 'index' %}">
             <h1 class="display-1 text-center">It's Khamin's Day!</h1>
-        </div>
+        </a>
+        <p class="lead text-center">
+            ร่วมอวยพรวันเกิดให้ขมิ้น BNK48 (มนิภา รู้ปัญญา) ได้ด้วยกันที่นี่
+        </p>
         <form method="POST">
             {% csrf_token %}
             {{ form|crispy }}

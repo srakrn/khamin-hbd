@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Wish
 from .forms import WishForm
+from django.contrib import messages
+
 
 # Create your views here.
 
@@ -19,6 +21,11 @@ def new_wish(request):
         form = WishForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.add_message(
+                request,
+                messages.SUCCESS,
+                "ส่งคำอวยพรให้ขมิ้นสำเร็จแล้ว ขอบคุณมากๆ นะ! :D",
+            )
             return redirect("index")
         else:
             return render(request, "pages/new_wish.html", {"form": form})

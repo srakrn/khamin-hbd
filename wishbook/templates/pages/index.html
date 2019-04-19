@@ -3,6 +3,11 @@
 
 {% block content %}
     <div class="container">
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">{{ message }}</li></div>
+        {% endfor %}
+    {% endif %}
         <div class="card-columns">
             <a href="{% url 'new_wish' %}">
                 <div class="card p-3 text-white bg-primary text-center">

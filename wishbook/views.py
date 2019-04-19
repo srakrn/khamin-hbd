@@ -6,5 +6,5 @@ from .models import Wish
 
 
 def index(request):
-    all_wishes = Wish.objects.order_by("-created").all()
+    all_wishes = Wish.objects.filter(shown__exact=True).order_by("-created")
     return render(request, "pages/index.html", {"all_wishes": all_wishes})

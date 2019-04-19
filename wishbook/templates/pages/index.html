@@ -4,15 +4,18 @@
 {% block content %}
     <div class="jumbotron jumbotron-fluid header" id="header-mainpage">
         <div class="container">
-            <a href="{% url 'index' %}">
-                <h1 class="display-1">It's Khamin's Day! 🎂</h1>
-            </a>
-            <p class="lead">
-                ส่งความรัก ความห่วงใย และความปรารถนาดี เนื่องในวันเกิดของขมิ้น BNK48 ได้ด้วยกันที่นี่
-            </p>
-            <a class="btn btn-primary btn-lg" href="{% url 'new_wish' %}"><img src="{% static 'wishbook/add.svg'%}"></img> ร่วมส่งคำอวยพร!</a>
-            <div class="header-spacer"></div>
-            ทำด้วยใจให้ขมิ้น โดย
+            <div class="col-lg-8 offset-lg-4">
+                <a href="{% url 'index' %}">
+                    <h1 class="display-1">It's Khamin's Day!</h1>
+                </a>
+                <p class="lead">
+                    ร่วมติดแฮชแท็ก <span style="font-weight: bold;">#Born2BeKhamin</span>
+                    ส่งความรัก ความห่วงใย และความปรารถนาดี เนื่องในวันเกิดของขมิ้น BNK48 ได้ด้วยกันที่นี่
+                </p>
+                <a class="btn btn-primary btn-lg" href="{% url 'new_wish' %}"><img src="{% static 'wishbook/add.svg'%}"></img> ร่วมส่งคำอวยพร!</a>
+                <div class="header-spacer"></div>
+                ร่วมกันทำให้ขมิ้น (จากใจ) โดย
+            </div>
         </div>
     </div>
     <div class="container">

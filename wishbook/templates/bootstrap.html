@@ -10,21 +10,22 @@
         <link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
         <style type="text/css">
             #header{
-                height: 70vh;
                 background: url('{% static "wishbook/bg.jpg" %}');
                 background-size: cover;
+                color: #fff;
             }
-            #header a:hover{
+            #header a, #header a:hover{
                 color: #fff;
             }
             #header h1{
-                color: #fff;
                 font-family: "Pattaya", sans-serif;
                 text-shadow: 0px 2px 7px #000;
             }
             #header .lead{
-                color: #fff;
                 text-shadow: 0px 1px 4px #000;
+            }
+            #header #header-spacer{
+                height: 20vh;
             }
             .invalid-feedback{
                 display: block !important;
@@ -32,17 +33,6 @@
         </style>
     </head>
     <body>
-        <div class="jumbotron" id="header">
-            <div class="container">
-                <a href="{% url 'index' %}">
-                    <h1 class="display-1">It's Khamin's Day! 🎂</h1>
-                </a>
-                <p class="lead">
-                    ส่งความรัก ความห่วงใย และความปรารถนาดี เนื่องในวันเกิดของขมิ้น BNK48 ได้ด้วยกันที่นี่
-                </p>
-                <a class="btn btn-primary btn-lg" href="{% url 'new_wish' %}"><img src="{% static 'wishbook/add.svg'%}"></img> ร่วมส่งคำอวยพร!</a>
-            </div>
-        </div>
         {% block content %}
         {% endblock %}
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

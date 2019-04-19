@@ -2,9 +2,8 @@
 {% load static %}
 
 {% block content %}
-    <div class="jumbotron jumbotron-fluid" id="header">
+    <div class="jumbotron jumbotron-fluid header" id="header-mainpage">
         <div class="container">
-            <img id="khamin" src="{% static 'khamin_1.png' %}"></img>
             <a href="{% url 'index' %}">
                 <h1 class="display-1">It's Khamin's Day! 🎂</h1>
             </a>
@@ -12,8 +11,8 @@
                 ส่งความรัก ความห่วงใย และความปรารถนาดี เนื่องในวันเกิดของขมิ้น BNK48 ได้ด้วยกันที่นี่
             </p>
             <a class="btn btn-primary btn-lg" href="{% url 'new_wish' %}"><img src="{% static 'wishbook/add.svg'%}"></img> ร่วมส่งคำอวยพร!</a>
-            <div id="header-spacer"></div>
-            ทำด้วยใจ ให้ขมิ้น โดย: 
+            <div class="header-spacer"></div>
+            ทำด้วยใจให้ขมิ้น โดย
         </div>
     </div>
     <div class="container">

@@ -8,5 +8,20 @@
                 ร่วมอวยพรวันเกิดให้ขมิ้น BNK48 (มนิภา รู้ปัญญา) ได้ด้วยกันที่นี่
             </p>
         </div>
+        <div class="card-columns">
+            <div class="card p-3">
+                ร่วมอวยพร...
+            </div>
+            {% for wish in all_wishes %}
+                <div class="card p-3">
+                    <blockquote class="blockquote mb-0">
+                        <p>{{ wish.wish_text }}</p>
+                        <footer class="blockquote-footer">
+                            {{ wish.wish_owner }}
+                        </footer>
+                    </blockquote>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}

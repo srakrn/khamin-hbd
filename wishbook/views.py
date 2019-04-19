@@ -16,4 +16,6 @@ def new_wish(request):
         form = WishForm()
         return render(request, "pages/new_wish.html", {"form": form})
     else:
-        return HttpResponse("เฮือก")
+        form = WishForm(request.POST)
+        form.save()
+        return HttpResponse("เรียบร้อยส์")

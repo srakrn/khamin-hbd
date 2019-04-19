@@ -10,9 +10,17 @@
         <link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
         <style type="text/css">
             #header{
+                position: relative;
                 background: url('{% static "wishbook/bg.jpg" %}');
                 background-size: cover;
                 color: #fff;
+            }
+            #header #khamin{
+                position: absolute;
+                bottom: 0px;
+                right: 10%;
+                height: 90%;
+                z-index: 0;
             }
             #header a, #header a:hover{
                 color: #fff;

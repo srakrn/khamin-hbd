@@ -7,19 +7,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Khamin's Day</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
         <style type="text/css">
             body{
+                margin-top: 30px;
+                color: #fff;
                 background: url('{% static "wishbook/bg.jpg" %}');
                 background-size: cover;
+            }
+            #header h1{
+                font-family: "Pattaya", sans-serif;
+                text-shadow: 0px 2px 7px #000;
+            }
+            #header .lead{
+                text-shadow: 0px 1px 4px #000;
             }
         </style>
     </head>
     <body>
         <div class="container">
-            <h1 class="display-1 text-center">It's Khamin's Day!</h1>
-            <p class="lead text-center">
-                ร่วมอวยพรวันเกิดให้ขมิ้น BNK48 (มนิภา รู้ปัญญา) ได้ด้วยกันที่นี่
-            </p>
+            <div id="header">
+                <h1 class="display-1 text-center">It's Khamin's Day!</h1>
+                <p class="lead text-center">
+                    ร่วมอวยพรวันเกิดให้ขมิ้น BNK48 (มนิภา รู้ปัญญา) ได้ด้วยกันที่นี่
+                </p>
+            </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     </body>

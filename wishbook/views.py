@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Wish
 from .forms import WishForm
@@ -17,5 +17,8 @@ def new_wish(request):
         return render(request, "pages/new_wish.html", {"form": form})
     else:
         form = WishForm(request.POST)
-        form.save()
-        return HttpResponse("เรียบร้อยส์")
+        if form.is_valid():
+            form.save()
+            return redirect("index")
+        else:
+            return render(request, "pages/new_wish.html", {"form": form})

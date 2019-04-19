@@ -5,7 +5,7 @@ from .models import Wish
 
 
 class WishAdmin(admin.ModelAdmin):
-    list_display = ("wish_text", "wish_owner")
+    list_display = ("id", "wish_text", "wish_owner")
     readonly_fields = ("created", )
 
 

@@ -2,6 +2,12 @@
 {% include "bootstrap.html" %}
 
 {% block content %}
+    <div class="jumbotron jumbotron-fluid" id="header">
+        <div class="container">
+            <a href="{% url 'index' %}"><< กลับหน้าแรก</a>
+            <h1>เขียนคำอวยพรให้ขมิ้น</h1>
+        </div>
+    </div>
     <div class="container">
         <form method="POST">
             {% csrf_token %}

@@ -20,11 +20,15 @@ def new_wish(request):
     else:
         form = WishForm(request.POST)
         if form.is_valid():
-            form.save()
+            wish = form.save()
             messages.add_message(
                 request,
                 messages.SUCCESS,
-                "ส่งคำอวยพรให้ขมิ้นสำเร็จแล้ว ขอบคุณมากๆ นะ! :D",
+                """ส่งคำอวยพรให้ขมิ้นสำเร็จแล้ว! ทวิตอวยพรด้วยข้อความเมื่อกี้ได้ด้วยการกดปุ่มนี้ 
+                    <a class="twitter-share-button"
+                    href='https://twitter.com/intent/tweet?url=hbdcherprang.herokupp.com&text={}%20#Born2BeKhamin'>Tweet</a></p>""".format(
+                    wish.wish_text
+                ),
             )
             return redirect("index")
         else:

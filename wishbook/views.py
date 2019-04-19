@@ -12,5 +12,8 @@ def index(request):
 
 
 def new_wish(request):
-    form = WishForm()
-    return render(request, "pages/new_wish.html", {"form": form})
+    if request.method == "GET":
+        form = WishForm()
+        return render(request, "pages/new_wish.html", {"form": form})
+    else:
+        return HttpResponse("เฮือก")

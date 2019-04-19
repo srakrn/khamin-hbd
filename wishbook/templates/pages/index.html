@@ -8,13 +8,15 @@
                 <h1 class="display-1 text-center">It's Khamin's Day!</h1>
             </a>
             <p class="lead text-center">
-                ร่วมอวยพรวันเกิดให้ขมิ้น BNK48 (มนิภา รู้ปัญญา) ได้ด้วยกันที่นี่
+                ส่งความรัก ความห่วงใย และความปรารถนาดี เนื่องในวันเกิดของขมิ้น BNK48 ได้ด้วยกันที่นี่
             </p>
         </div>
         <div class="card-columns">
-            <div class="card p-3 text-white bg-primary text-center">
-                <h3><img src="{% static 'wishbook/add.svg'%}"></img> ร่วมส่งคำอวยพร!</h3>
-            </div>
+            <a href="{% url 'new_wish' %}">
+                <div class="card p-3 text-white bg-primary text-center">
+                    <h3><img src="{% static 'wishbook/add.svg'%}"></img> ร่วมส่งคำอวยพร!</h3>
+                </div>
+            </a>
             {% for wish in all_wishes %}
                 <div class="card p-3">
                     <blockquote class="blockquote mb-0">
